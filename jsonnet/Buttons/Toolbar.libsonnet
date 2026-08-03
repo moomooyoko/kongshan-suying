@@ -24,7 +24,7 @@ local settings = import '../Settings.libsonnet';
   },
 
   toolbar: {
-    height: 45,
+    height: 55,
     insets: {
       top: 6,
     },
@@ -61,10 +61,10 @@ local settings = import '../Settings.libsonnet';
     toolbarMenuButton: {
       name: 'toolbarMenuButton',
       params: {
-        action: { floatKeyboardType: 'panel', },
-        systemImageName: 'hexagon.righthalf.filled',
+        // action: { floatKeyboardType: 'panel', },
+        // systemImageName: 'hexagon.righthalf.filled',
         // systemImageName: 'swirl.circle.righthalf.filled', // 需要 iOS 17+
-        text: '面板',
+        text: '',
       },
     },
     toolbarDismissButton: {

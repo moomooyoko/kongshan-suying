@@ -50,16 +50,7 @@ local settings = import '../Settings.libsonnet';
         (if settings.spaceButtonSchemaNameCenter != null then
           ['rimeSchemaChangedNotification']
         else []),
-
-      whenPreeditChanged: {
-        text: settings.spaceButtonComposingText,
-        fontSize: fonts.systemButtonTextFontSize,
-
-        swipeUp: {
-          action: { shortcut: '#次选上屏' },
-          text: '次选',
-        },
-      },
+      swipeDown: { action: { shortcut: '#selectText' } },
     },
   },
 
@@ -78,11 +69,8 @@ local settings = import '../Settings.libsonnet';
       repeatAction: self.action,
       systemImageName: 'delete.left',
       highlightSystemImageName: 'delete.left.fill',
-	  whenPreeditChanged: {
-		swipeUp: {
-          action: { sendKeys: 'Control+Backspace' } // 删除一个音节
-		},
-	  },
+	  swipeUp: { action: { shortcut: '#deleteText'} },
+      swipeDown: { action: { shortcut: '#undo' } },
     },
   },
 
@@ -273,10 +261,12 @@ local settings = import '../Settings.libsonnet';
     name: 'clearPreeditButton',
     params: {
       action: { shortcut: '#换行' },
+      systemImageName: 'arrow.turn.down.left',
       text: '换行',
 
       whenPreeditChanged: {
         action: { shortcut: '#重输' },
+        systemImageName: 'xmark',
         text: '重输',
       },
     },

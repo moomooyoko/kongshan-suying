@@ -21,6 +21,7 @@ local commonButtons = import './Common.libsonnet';
     params: {
       action: { character: '1' },
       swipeUp: { action: { symbol: '1' } },
+      swipeDown: { action: 'tab' },
       text: '@/.',
 
       whenPreeditChanged: {
@@ -73,6 +74,7 @@ local commonButtons = import './Common.libsonnet';
     params: {
       action: { character: '7' },
       swipeUp: { action: { symbol: '7' } },
+      swipeDown: { action: { shortcut: '#cut' } },
       text: 'pqrs',
     },
   },
@@ -81,6 +83,7 @@ local commonButtons = import './Common.libsonnet';
     params: {
       action: { character: '8' },
       swipeUp: { action: { symbol: '8' } },
+      swipeDown: { action: { shortcut: '#copy' } },
       text: 'tuv',
     },
   },
@@ -89,6 +92,7 @@ local commonButtons = import './Common.libsonnet';
     params: {
       action: { character: '9' },
       swipeUp: { action: { symbol: '9' } },
+      swipeDown: { action: { shortcut: '#paste' } },
       text: 'wxyz',
     },
   },
@@ -143,6 +147,7 @@ local commonButtons = import './Common.libsonnet';
     name: 'cursorRightButton',
     params: {
       action: { sendKeys: 'Down' },
+      swipeUp: { action: { sendKeys: 'Up' } },
       text: '选择',
     }
   },
