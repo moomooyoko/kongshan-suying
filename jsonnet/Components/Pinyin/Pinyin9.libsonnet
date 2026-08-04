@@ -15,7 +15,7 @@ local narrowVStackStyle = {
   style: {
     [this.name]: {
       size: {
-        width: { percentage: 0.18 },
+        width: { percentage: 0.185 },
       },
     },
   },
@@ -239,7 +239,7 @@ local newKeyLayout(isDark=false, isPortrait=false, extraParams={}) =
 
 local backgroundInsets = if !settings.iPad then
 {
-  portrait: { top: 3, left: 4, bottom: 3, right: 4 },
+  portrait: { top: 3, left: 3, bottom: 3, right: 3 },
   landscape: { top: 3, left: 3, bottom: 3, right: 3 },
 }
 else
