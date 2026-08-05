@@ -19,14 +19,10 @@ local commonButtons = import './Common.libsonnet';
   t9OneButton: {
     name: 't9OneButton',
     params: {
-      action: { character: '1' },
+      action: { symbol: '，' },
       swipeUp: { action: { symbol: '1' } },
       swipeDown: { action: 'tab' },
-      text: '@/.',
-
-      whenPreeditChanged: {
-        text: '分词',
-      }
+      text: '逗号',
     },
   },
   t9TwoButton: {
